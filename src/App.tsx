@@ -18,6 +18,7 @@ import { ReservationSection } from './components/ReservationSection';
 import { TestimonialsFaq } from './components/TestimonialsFaq';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { StickyCartBar } from './components/StickyCartBar';
 import { AmbientPlayerWidget } from './components/AmbientPlayerWidget';
 import { cafeDetails, menuItemsData } from './data/chaiMehfilData';
 
@@ -216,6 +217,14 @@ export default function App() {
 
       {/* Floating Ambient Sufi Sound & Weather Atmosphere Widget */}
       <AmbientPlayerWidget />
+
+      {/* Floating Bottom Sticky Cart Bar when items are added */}
+      <StickyCartBar
+        cartItems={cartItems}
+        currentLang={currentLang}
+        onOpenCart={() => setIsCartDrawerOpen(true)}
+        onClearCart={handleClearCart}
+      />
 
       {/* Slide-out / Modal Basket Drawer */}
       {isCartDrawerOpen && (
