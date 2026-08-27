@@ -98,7 +98,7 @@ export default function App() {
   }, {} as Record<string, number>);
 
   return (
-    <div className={`min-h-screen bg-[#090503] text-[#f7ede2] selection:bg-amber-600 selection:text-white ${
+    <div className={`min-h-screen w-full max-w-full overflow-x-hidden relative bg-[#090503] text-[#f7ede2] selection:bg-amber-600 selection:text-white ${
       currentLang === 'ur' ? 'font-urdu' : 'font-sans'
     }`}>
       {/* 1. Sticky Navigation Header with Integrated Delivery Hotline */}

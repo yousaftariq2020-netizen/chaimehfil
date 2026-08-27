@@ -83,32 +83,32 @@ export const Hero: React.FC<HeroProps> = ({
         </p>
 
         {/* Action Buttons Row */}
-        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mb-9 sm:mb-11 max-w-2xl mx-auto">
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 mb-8 sm:mb-10 max-w-2xl mx-auto">
           {/* View Deals CTA */}
           <a
             id="hero-deals-cta"
             href="#deals-gallery"
-            className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-600 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-black font-extrabold text-xs sm:text-sm shadow-xl shadow-amber-950/70 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 border border-amber-300/60 cursor-pointer"
+            className="w-full sm:w-auto px-5 py-3 rounded-xl bg-gradient-to-r from-amber-500 via-amber-600 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-black font-extrabold text-xs sm:text-sm shadow-xl shadow-amber-950/70 transition-all hover:scale-[1.02] flex items-center justify-center gap-2 border border-amber-300/60 cursor-pointer"
           >
             <Flame className="w-4 h-4 fill-black text-black" />
-            <span>🔥 Explore Mega Deals</span>
+            <span>Explore Mega Deals</span>
           </a>
 
           {/* Send Gift Chai CTA */}
           <a
             id="hero-gift-cta"
             href="#gift-card"
-            className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-gradient-to-r from-rose-950/90 to-amber-950/90 hover:from-rose-900 hover:to-amber-900 text-amber-200 font-extrabold text-xs sm:text-sm border border-rose-500/50 shadow-lg shadow-rose-950/50 backdrop-blur-sm transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-5 py-3 rounded-xl bg-gradient-to-r from-rose-950/90 to-amber-950/90 hover:from-rose-900 hover:to-amber-900 text-amber-200 font-extrabold text-xs sm:text-sm border border-rose-500/50 shadow-lg shadow-rose-950/50 backdrop-blur-sm transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
           >
             <Gift className="w-4 h-4 text-rose-400" />
-            <span>🎁 Send Chai to a Friend</span>
+            <span>Send Chai to a Friend</span>
           </a>
 
           {/* View Menu CTA */}
           <a
             id="hero-menu-cta"
             href="#menu"
-            className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-[#1d0e07]/90 hover:bg-[#2c150b] text-amber-200 font-bold text-xs sm:text-sm border border-amber-700/60 backdrop-blur-sm transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-4.5 py-3 rounded-xl bg-[#1d0e07]/90 hover:bg-[#2c150b] text-amber-200 font-bold text-xs sm:text-sm border border-amber-700/60 backdrop-blur-sm transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
           >
             <Coffee className="w-4 h-4 text-amber-400" />
             <span>{t.btnViewMenu}</span>
@@ -118,7 +118,7 @@ export const Hero: React.FC<HeroProps> = ({
           <button
             id="hero-whatsapp-cta"
             onClick={onOpenWhatsApp}
-            className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-emerald-800/90 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm border border-emerald-500/50 backdrop-blur-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 cursor-pointer"
+            className="w-full sm:w-auto px-4.5 py-3 rounded-xl bg-emerald-800/90 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm border border-emerald-500/50 backdrop-blur-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 text-emerald-300" />
             <span>WhatsApp Delivery</span>
