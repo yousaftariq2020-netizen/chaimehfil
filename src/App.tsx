@@ -13,6 +13,7 @@ import { EventPackagesSection } from './components/EventPackagesSection';
 import { ChaiGiftCardSection } from './components/ChaiGiftCardSection';
 import { ChaiGiftAdBanner } from './components/ChaiGiftAdBanner';
 import { ChaiMoodMatcher } from './components/ChaiMoodMatcher';
+import { MidnightCravingsSection } from './components/MidnightCravingsSection';
 import { GallerySection } from './components/GallerySection';
 import { OrderEstimator } from './components/OrderEstimator';
 import { ReservationSection } from './components/ReservationSection';
@@ -157,6 +158,12 @@ export default function App() {
 
         {/* 6.5 Interactive Chai Mood Matcher Quiz */}
         <ChaiMoodMatcher
+          currentLang={currentLang}
+          onAddToCart={handleAddToCart}
+        />
+
+        {/* 6.7 Midnight Cravings & Late Night Squad Express (11 PM - 4 AM) */}
+        <MidnightCravingsSection
           currentLang={currentLang}
           onAddToCart={handleAddToCart}
         />

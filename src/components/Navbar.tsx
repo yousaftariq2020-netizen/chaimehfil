@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift, Play, QrCode, Star } from 'lucide-react';
+import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift, Play, QrCode, Star, Moon } from 'lucide-react';
 import { Language, CartItem } from '../types';
 import { translations } from '../data/translations';
 import { Logo } from './Logo';
@@ -38,6 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const desktopNavLinks = [
     { label: '🔥 Deals', href: '#deals-gallery', isSpecial: true },
+    { label: '🌙 Midnight Deals', href: '#midnight-cravings', isNight: true },
     { label: t.navMenu, href: '#menu' },
     { label: '☕ Mood Matcher', href: '#mood-matcher' },
     { label: '🪑 Seating', href: '#seating-zones' },
@@ -50,6 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const allNavLinks = [
     { label: t.navHome, href: '#home', icon: Coffee },
     { label: '🔥 Mega Deals', href: '#deals-gallery', icon: Flame, isSpecial: true },
+    { label: '🌙 نائٹ ایکسپریس (Midnight Cravings)', href: '#midnight-cravings', icon: Moon, isNight: true },
     { label: '✨ Experience', href: '#experience', icon: Sparkles },
     { label: t.navMenu, href: '#menu', icon: UtensilsCrossed },
     { label: '☕ چائے موڈ (Mood Matcher)', href: '#mood-matcher', icon: Sparkles },
@@ -119,6 +121,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className={`text-xs font-semibold px-2 xl:px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                   link.isSpecial
                     ? 'text-amber-300 bg-amber-950/80 border border-amber-600/50 font-bold hover:bg-amber-600 hover:text-white'
+                    : link.isNight
+                    ? 'text-amber-300 bg-[#250d03] border border-amber-500/50 font-bold hover:bg-amber-600 hover:text-white'
                     : link.isGift
                     ? 'text-rose-300 bg-rose-950/40 border border-rose-600/40 hover:bg-rose-900/60'
                     : 'text-amber-100/85 hover:text-amber-300 hover:bg-amber-950/50'
