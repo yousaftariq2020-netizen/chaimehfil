@@ -23,6 +23,8 @@ import { StickyCartBar } from './components/StickyCartBar';
 import { AmbientPlayerWidget } from './components/AmbientPlayerWidget';
 import { QRCodeStandeeModal } from './components/QRCodeStandeeModal';
 import { PrintableTableQRBanner } from './components/PrintableTableQRBanner';
+import { CustomerReviewsSection } from './components/CustomerReviewsSection';
+import { ScrollToTopButton } from './components/ScrollToTopButton';
 import { cafeDetails, menuItemsData } from './data/chaiMehfilData';
 
 export default function App() {
@@ -204,8 +206,8 @@ export default function App() {
           onOpenReserveModal={() => handleOpenReserve()}
         />
 
-        {/* 14. Customer Reviews & FAQs */}
-        <TestimonialsFaq
+        {/* 14. Customer Reviews & Live Google Wall */}
+        <CustomerReviewsSection
           currentLang={currentLang}
         />
 
@@ -235,6 +237,9 @@ export default function App() {
 
       {/* Floating Ambient Sufi Sound & Weather Atmosphere Widget */}
       <AmbientPlayerWidget />
+
+      {/* Floating Scroll To Top & Quick Jump */}
+      <ScrollToTopButton currentLang={currentLang} />
 
       {/* Floating Bottom Sticky Cart Bar when items are added */}
       <StickyCartBar
