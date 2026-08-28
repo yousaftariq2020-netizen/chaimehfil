@@ -207,13 +207,29 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Mobile Right Controls */}
           <div className="flex items-center gap-1.5 sm:hidden">
-            {/* Quick Lang Switch on mobile */}
-            <button
-              onClick={() => onLanguageChange(currentLang === 'ur' ? 'roman' : currentLang === 'roman' ? 'en' : 'ur')}
-              className="px-2 py-1 rounded bg-[#1c0f08] border border-amber-800/40 text-amber-300 text-[10px] font-bold"
+            {/* Chai Gift Button on Mobile Top Bar */}
+            <a
+              href="#gift-card"
+              id="mobile-gift-chai-btn"
+              className="px-2 py-1 rounded-lg bg-gradient-to-r from-amber-600 to-amber-700 text-amber-100 border border-amber-400/40 text-[11px] font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-all"
+              title="Gift Chai Card"
             >
-              {currentLang === 'ur' ? 'اردو' : currentLang === 'roman' ? 'ROMAN' : 'ENG'}
-            </button>
+              <Gift className="w-3.5 h-3.5 text-amber-200" />
+              <span>Gift Chai</span>
+            </a>
+
+            {/* Barcode / QR Standee Button on Mobile Top Bar */}
+            {onOpenQRModal && (
+              <button
+                id="mobile-qr-standee-btn"
+                onClick={onOpenQRModal}
+                className="p-1.5 rounded-lg bg-[#201007] text-amber-300 border border-amber-600/50 flex items-center gap-1 active:scale-95 transition-all shadow-sm"
+                title="Scan / Print QR Standee"
+                aria-label="Table QR Code"
+              >
+                <QrCode className="w-4 h-4 text-amber-400" />
+              </button>
+            )}
 
             {/* Cart Button */}
             <button
