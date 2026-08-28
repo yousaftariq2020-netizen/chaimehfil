@@ -203,23 +203,36 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                       </div>
                     )}
 
-                    {/* Price Tag Pill */}
-                    <div className="absolute bottom-3 right-3 px-3 py-1 rounded-xl bg-[#090503]/90 backdrop-blur-md border border-amber-500/40 text-amber-300 font-black text-sm sm:text-base shadow-lg">
-                      Rs. {item.price}
+                    {/* Highly Visible Price Tag Pill on Image */}
+                    <div className="absolute bottom-3 right-3 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-black font-black text-sm sm:text-base shadow-xl shadow-black/80 flex items-center gap-1 border border-amber-300/60">
+                      <span>Rs. {item.price}/-</span>
                     </div>
                   </div>
 
                   {/* Content Info */}
                   <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
                     <div>
-                      {/* English & Urdu Name */}
+                      {/* English & Urdu Name with Price Tag */}
                       <div className="flex items-start justify-between gap-2 mb-1.5">
-                        <h3 className="text-base font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
-                          {item.name}
-                        </h3>
-                        <span className="font-urdu text-sm text-amber-300/90 whitespace-nowrap pt-0.5">
-                          {item.nameUrdu}
-                        </span>
+                        <div>
+                          <h3 className="text-base font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                            {item.name}
+                          </h3>
+                          <span className="font-urdu text-xs text-amber-300/90 whitespace-nowrap block mt-0.5">
+                            {item.nameUrdu}
+                          </span>
+                        </div>
+                        {/* Prominent Price Tag in Content */}
+                        <div className="shrink-0 text-right">
+                          <span className="text-base sm:text-lg font-black text-amber-400 font-sans tracking-tight block">
+                            Rs. {item.price}
+                          </span>
+                          {item.sizes && (
+                            <span className="text-[10px] text-amber-400/70 block">
+                              (Starting)
+                            </span>
+                          )}
+                        </div>
                       </div>
 
                       {/* Description */}
@@ -243,19 +256,24 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                         </div>
                       )}
 
-                      {/* Multiple sizes if any */}
+                      {/* Multiple sizes with Clear Prices */}
                       {item.sizes && (
-                        <div className="flex items-center gap-2 mt-2 flex-wrap">
-                          {item.sizes.map((s, idx) => (
-                            <span key={idx} className="text-[10px] px-2 py-0.5 rounded bg-amber-950/80 border border-amber-800/40 text-amber-300">
-                              {s.size}: Rs. {s.price}
-                            </span>
-                          ))}
+                        <div className="mt-2.5 space-y-1">
+                          <span className="text-[10px] font-bold text-amber-400/80 uppercase tracking-wider block">
+                            Available Sizes & Prices:
+                          </span>
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            {item.sizes.map((s, idx) => (
+                              <span key={idx} className="text-[11px] px-2.5 py-1 rounded-lg bg-amber-950/90 border border-amber-600/50 text-amber-200 font-semibold shadow-sm">
+                                <strong className="text-amber-100">{s.size}:</strong> <span className="text-amber-400 font-black">Rs. {s.price}/-</span>
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
 
-                    {/* Footer Row: Prep Time & Add / Stepper Controls */}
+                    {/* Footer Row: Prep Time, Price & Add / Stepper Controls */}
                     <div className="pt-3 border-t border-amber-900/30 flex items-center justify-between gap-2">
                       <div className="flex items-center gap-1.5 text-[11px] text-amber-400/70">
                         <Clock className="w-3.5 h-3.5 text-amber-500" />
@@ -290,7 +308,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                           className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-md ${
                             isJustAdded
                               ? 'bg-emerald-600 text-white scale-95'
-                              : 'bg-[#241208] hover:bg-amber-600 text-amber-200 hover:text-white border border-amber-800/50'
+                              : 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-black font-black border border-amber-400/40 shadow-amber-950'
                           }`}
                         >
                           {isJustAdded ? (
@@ -301,7 +319,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
                           ) : (
                             <>
                               <Plus className="w-3.5 h-3.5" />
-                              <span>Order</span>
+                              <span>Order (Rs. {item.price})</span>
                             </>
                           )}
                         </button>

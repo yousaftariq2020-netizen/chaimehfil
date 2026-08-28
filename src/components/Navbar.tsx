@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift, Play, QrCode } from 'lucide-react';
+import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift, Play, QrCode, Star } from 'lucide-react';
 import { Language, CartItem } from '../types';
 import { translations } from '../data/translations';
 import { Logo } from './Logo';
@@ -39,6 +39,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const desktopNavLinks = [
     { label: '🔥 Deals', href: '#deals-gallery', isSpecial: true },
     { label: t.navMenu, href: '#menu' },
+    { label: '☕ Mood Matcher', href: '#mood-matcher' },
     { label: '🪑 Seating', href: '#seating-zones' },
     { label: t.navQawwali, href: '#qawwali' },
     { label: '🎁 Gift Chai', href: '#gift-card', isGift: true },
@@ -51,10 +52,12 @@ export const Navbar: React.FC<NavbarProps> = ({
     { label: '🔥 Mega Deals', href: '#deals-gallery', icon: Flame, isSpecial: true },
     { label: '✨ Experience', href: '#experience', icon: Sparkles },
     { label: t.navMenu, href: '#menu', icon: UtensilsCrossed },
+    { label: '☕ چائے موڈ (Mood Matcher)', href: '#mood-matcher', icon: Sparkles },
     { label: '🪑 Seating Zones', href: '#seating-zones', icon: Users },
     { label: t.navQawwali, href: '#qawwali', icon: Music },
     { label: '🎉 Events & Mehfil', href: '#events', icon: Gift },
     { label: '🎁 Gift Chai', href: '#gift-card', icon: Gift },
+    { label: '⭐ کسٹمر ریویوز', href: '#reviews-section', icon: Star },
     { label: '🎬 Video Vlogs', href: '#video-reviews', icon: Play },
     { label: t.navGallery, href: '#gallery', icon: ImageIcon },
     { label: t.navReserve, href: '#reserve', icon: Calendar },

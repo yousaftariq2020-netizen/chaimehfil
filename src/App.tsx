@@ -12,6 +12,7 @@ import { QawwaliSchedule } from './components/QawwaliSchedule';
 import { EventPackagesSection } from './components/EventPackagesSection';
 import { ChaiGiftCardSection } from './components/ChaiGiftCardSection';
 import { ChaiGiftAdBanner } from './components/ChaiGiftAdBanner';
+import { ChaiMoodMatcher } from './components/ChaiMoodMatcher';
 import { GallerySection } from './components/GallerySection';
 import { OrderEstimator } from './components/OrderEstimator';
 import { ReservationSection } from './components/ReservationSection';
@@ -152,6 +153,12 @@ export default function App() {
           onAddToCart={handleAddToCart}
           cartItemCounts={cartItemCounts}
           onUpdateQuantity={handleUpdateQuantity}
+        />
+
+        {/* 6.5 Interactive Chai Mood Matcher Quiz */}
+        <ChaiMoodMatcher
+          currentLang={currentLang}
+          onAddToCart={handleAddToCart}
         />
 
         {/* 7. Interactive Rooftop Seating Zones & Sitting Guide */}
