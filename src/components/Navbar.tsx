@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift } from 'lucide-react';
+import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift, Play } from 'lucide-react';
 import { Language, CartItem } from '../types';
 import { translations } from '../data/translations';
 import { Logo } from './Logo';
@@ -53,6 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { label: t.navQawwali, href: '#qawwali', icon: Music },
     { label: '🎉 Events & Mehfil', href: '#events', icon: Gift },
     { label: '🎁 Gift Chai', href: '#gift-card', icon: Gift },
+    { label: '🎬 Video Vlogs', href: '#video-reviews', icon: Play },
     { label: t.navGallery, href: '#gallery', icon: ImageIcon },
     { label: t.navReserve, href: '#reserve', icon: Calendar },
     { label: t.navContact, href: '#contact', icon: Phone },

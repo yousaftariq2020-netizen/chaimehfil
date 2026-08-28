@@ -88,3 +88,20 @@ export interface CartItem {
   notes?: string;
 }
 
+export interface CustomerVideoReview {
+  id: string;
+  customerName: string;
+  tagline: string;
+  taglineUrdu: string;
+  rating: number;
+  videoUrl: string;
+  posterImage: string;
+  category: 'chai' | 'deals' | 'qawwali' | 'ambience' | 'family';
+  likesCount: number;
+  duration: string;
+  location: string;
+  verifiedVisit: boolean;
+  dishReviewed: string;
+  feedbackQuote: string;
+}
+

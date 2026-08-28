@@ -16,6 +16,7 @@ import { GallerySection } from './components/GallerySection';
 import { OrderEstimator } from './components/OrderEstimator';
 import { ReservationSection } from './components/ReservationSection';
 import { TestimonialsFaq } from './components/TestimonialsFaq';
+import { CustomerVideoReviews } from './components/CustomerVideoReviews';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { StickyCartBar } from './components/StickyCartBar';
@@ -198,7 +199,14 @@ export default function App() {
           prefilledEventTitle={selectedEventForBooking}
         />
 
-        {/* 13. Customer Reviews & FAQs */}
+        {/* 13. Customer Video Clips & Mehfil Stories */}
+        <CustomerVideoReviews
+          currentLang={currentLang}
+          onOpenOrderModal={() => setIsCartDrawerOpen(true)}
+          onOpenReserveModal={() => handleOpenReserve()}
+        />
+
+        {/* 14. Customer Reviews & FAQs */}
         <TestimonialsFaq
           currentLang={currentLang}
         />

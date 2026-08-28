@@ -1,4 +1,4 @@
-import { MenuItem, QawwaliNightEvent, GalleryItem, OfficialPoster } from '../types';
+import { MenuItem, QawwaliNightEvent, GalleryItem, OfficialPoster, CustomerVideoReview } from '../types';
 
 // Contact & Location Details from Official Menu Posters
 export const cafeDetails = {
@@ -1188,3 +1188,71 @@ export const reviewsData = [
     date: 'Last week'
   }
 ];
+
+export const customerVideoReviewsData: CustomerVideoReview[] = [
+  {
+    id: 'vid-1',
+    customerName: 'Zain & Foodies Lahore',
+    tagline: 'Washi Mega Deal & Piping Matka Chai Unboxing',
+    taglineUrdu: 'واشی میگا ڈیل اور مٹکہ چائے ریویو',
+    rating: 5,
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hot-coffee-being-poured-into-a-cup-41553-large.mp4',
+    posterImage: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+    category: 'deals',
+    likesCount: 1420,
+    duration: '0:45',
+    location: 'Open Rooftop Zone',
+    verifiedVisit: true,
+    dishReviewed: 'Washi Mega Deal (Rs. 2300) + Matka Chai',
+    feedbackQuote: '“Honestly Lahore ki best chai deal! 1 pizza, 3 burgers, roll, shots aur margarita... 2300 mein 5 dost araam se enjoy kar gaye.”'
+  },
+  {
+    id: 'vid-2',
+    customerName: 'Hamza Khan Vlogs',
+    tagline: 'Live Sufi Qawwali Night Experience at Rooftop',
+    taglineUrdu: 'صوفیانہ قوالی نائٹ لائیو ماحول',
+    rating: 5,
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-acoustic-guitar-player-sitting-by-the-fire-42588-large.mp4',
+    posterImage: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
+    category: 'qawwali',
+    likesCount: 2890,
+    duration: '1:10',
+    location: 'Stage Mehfil Area',
+    verifiedVisit: true,
+    dishReviewed: 'Special Zafrani Doodh Patti + Jalebi',
+    feedbackQuote: '“Under the open sky, soothing harmomium notes and burning wood aroma. Chai Mehfil gives pure old-Lahore vibes!”'
+  },
+  {
+    id: 'vid-3',
+    customerName: 'Dr. Fatima & Family',
+    tagline: 'Family Pavilion & Stuffed Cheese Pizza Review',
+    taglineUrdu: 'فیملی سیکشن اور چیزی پیزا کا تاثر',
+    rating: 5,
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-putting-cheese-on-a-pizza-43187-large.mp4',
+    posterImage: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80',
+    category: 'family',
+    likesCount: 980,
+    duration: '0:38',
+    location: 'Exclusive Family Pavilion',
+    verifiedVisit: true,
+    dishReviewed: '2 Medium Pizza Deal (Rs. 1500) + Malai Boti Roll',
+    feedbackQuote: '“Bohot hi clean aur family-safe environment hai. Staff bohot humble hai aur pizza crust bilkul fresh!”'
+  },
+  {
+    id: 'vid-4',
+    customerName: 'Bilal & Gang (PU Students)',
+    tagline: 'Tandoori Matka Chai Smoke & Charcoal Pouring',
+    taglineUrdu: 'دہکتے تندوری مٹکے کی کڑک چائے',
+    rating: 5,
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-serving-hot-tea-in-a-glass-41551-large.mp4',
+    posterImage: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=800&q=80',
+    category: 'chai',
+    likesCount: 3410,
+    duration: '0:52',
+    location: 'Outdoor Charpai Seating',
+    verifiedVisit: true,
+    dishReviewed: 'Tandoori Smokey Karak Chai',
+    feedbackQuote: '“Mittti ki sondhi khushboo aur doodh patti ka authentic taste. Raat 2 baje doston ke sath yahan aana sukoon hai.”'
+  }
+];
+
