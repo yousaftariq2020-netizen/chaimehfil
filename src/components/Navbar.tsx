@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift, Play } from 'lucide-react';
+import { Coffee, Flame, Music, UtensilsCrossed, Calendar, Image as ImageIcon, Phone, ShoppingBag, Menu as MenuIcon, X, Sparkles, Truck, Users, Gift, Play, QrCode } from 'lucide-react';
 import { Language, CartItem } from '../types';
 import { translations } from '../data/translations';
 import { Logo } from './Logo';
@@ -11,6 +11,7 @@ interface NavbarProps {
   cartItems: CartItem[];
   onOpenCart: () => void;
   onOpenReserve: () => void;
+  onOpenQRModal?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -18,7 +19,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   onLanguageChange,
   cartItems,
   onOpenCart,
-  onOpenReserve
+  onOpenReserve,
+  onOpenQRModal
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -163,6 +165,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             </div>
 
+            {/* Table QR Standee Trigger */}
+            {onOpenQRModal && (
+              <button
+                id="nav-qr-standee-btn"
+                onClick={onOpenQRModal}
+                className="p-1.5 lg:p-2 rounded-lg bg-[#201007] text-amber-300 hover:bg-[#2e160a] border border-amber-800/40 transition-colors flex items-center gap-1 cursor-pointer shadow-md shrink-0"
+                title="Print Table QR Standee"
+              >
+                <QrCode className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-amber-400" />
+                <span className="text-xs font-semibold hidden xl:inline">Table QR</span>
+              </button>
+            )}
+
             {/* Cart Button */}
             <button
               id="open-cart-btn"
@@ -272,7 +287,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             ))}
           </div>
 
-          <div className="pt-2 flex gap-2">
+          <div className="pt-2 flex flex-col sm:flex-row gap-2">
+            {onOpenQRModal && (
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenQRModal();
+                }}
+                className="w-full py-2.5 rounded-lg bg-[#1e0d05] hover:bg-[#2c1308] border border-amber-500/50 text-amber-300 font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-black"
+              >
+                <QrCode className="w-4 h-4 text-amber-400" />
+                <span>Print Table QR Standee</span>
+              </button>
+            )}
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

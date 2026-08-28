@@ -13,6 +13,7 @@ export const cafeDetails = {
   phone2: '0323-9017091',
   whatsappNumber: '923219597119',
   whatsappNumberSecondary: '923239017091',
+  websiteUrl: 'https://chaimehfil-flame.vercel.app',
   timings: 'Daily 5:00 PM – 4:00 AM (Open Late Night)',
   googleMapsUrl: 'https://maps.google.com/?q=Alrehman+Garden+Phase+2+Lahore'
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, Heart, Music, Phone, MapPin, Instagram, Facebook, Sparkles, Flame } from 'lucide-react';
+import { Coffee, Heart, Music, Phone, MapPin, Instagram, Facebook, Sparkles, Flame, QrCode, Printer } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../data/translations';
 import { Logo } from './Logo';
@@ -8,9 +8,10 @@ import { cafeDetails } from '../data/chaiMehfilData';
 interface FooterProps {
   currentLang: Language;
   onOpenReserve: () => void;
+  onOpenQRModal?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenReserve }) => {
+export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenReserve, onOpenQRModal }) => {
   const t = translations[currentLang];
 
   return (
@@ -79,6 +80,17 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenReserve }) =>
                   <span>›</span> Location & Hotlines
                 </a>
               </li>
+              {onOpenQRModal && (
+                <li>
+                  <button
+                    onClick={onOpenQRModal}
+                    className="text-amber-300 hover:text-amber-200 transition-colors flex items-center gap-1.5 font-bold cursor-pointer"
+                  >
+                    <QrCode className="w-3.5 h-3.5 text-amber-400" />
+                    <span>🖨️ Print Table QR Standees</span>
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
 

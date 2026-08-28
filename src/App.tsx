@@ -21,18 +21,15 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { StickyCartBar } from './components/StickyCartBar';
 import { AmbientPlayerWidget } from './components/AmbientPlayerWidget';
+import { QRCodeStandeeModal } from './components/QRCodeStandeeModal';
+import { PrintableTableQRBanner } from './components/PrintableTableQRBanner';
 import { cafeDetails, menuItemsData } from './data/chaiMehfilData';
 
 export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>('roman');
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    // Pre-populate with signature Karak Chai & Washi Deal
-    {
-      item: menuItemsData[0], // Khas Karak Doodh Patti
-      quantity: 2
-    }
-  ]);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false);
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
   const [selectedEventForBooking, setSelectedEventForBooking] = useState<string>('');
 
   const handleAddToCart = (item: MenuItem) => {
@@ -110,6 +107,7 @@ export default function App() {
         cartItems={cartItems}
         onOpenCart={() => setIsCartDrawerOpen(true)}
         onOpenReserve={() => handleOpenReserve()}
+        onOpenQRModal={() => setIsQRModalOpen(true)}
       />
 
       <main>
@@ -211,16 +209,28 @@ export default function App() {
           currentLang={currentLang}
         />
 
-        {/* 14. Contact & Directions */}
+        {/* 15. Printable Table QR & Instant Digital Menu Standees */}
+        <PrintableTableQRBanner
+          onOpenQRModal={() => setIsQRModalOpen(true)}
+        />
+
+        {/* 16. Contact & Directions */}
         <ContactSection
           currentLang={currentLang}
         />
       </main>
 
-      {/* 15. Footer */}
+      {/* 17. Footer */}
       <Footer
         currentLang={currentLang}
         onOpenReserve={() => handleOpenReserve()}
+        onOpenQRModal={() => setIsQRModalOpen(true)}
+      />
+
+      {/* Printable High-Resolution Table QR Standee Modal */}
+      <QRCodeStandeeModal
+        isOpen={isQRModalOpen}
+        onClose={() => setIsQRModalOpen(false)}
       />
 
       {/* Floating Ambient Sufi Sound & Weather Atmosphere Widget */}
