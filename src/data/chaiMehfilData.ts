@@ -9,10 +9,10 @@ export const cafeDetails = {
   secondaryTagline: 'Dosto Ki Mehfil, Swad Ka Tufaan!',
   address: 'Opposite Alrehman Garden Phase II, Gate No. 2, Main Sharaqpur Road, Lahore',
   addressUrdu: 'المحفل بالمقابل الرحمٰن گارڈن فیز 2، گیٹ نمبر 2، مین شرقپور روڈ، لاہور',
-  phone1: '0321-9597119',
-  phone2: '0323-9017091',
-  whatsappNumber: '923219597119',
-  whatsappNumberSecondary: '923239017091',
+  phone1: '0300-1234567',
+  phone2: '0312-3456789',
+  whatsappNumber: '923001234567',
+  whatsappNumberSecondary: '923123456789',
   websiteUrl: 'https://chaimehfil-flame.vercel.app',
   timings: 'Daily 5:00 PM – 4:00 AM (Open Late Night)',
   googleMapsUrl: 'https://maps.google.com/?q=Alrehman+Garden+Phase+2+Lahore'
@@ -109,7 +109,7 @@ export const officialPostersData: OfficialPoster[] = [
     id: 'poster-vintage-menu',
     title: 'Chai Mehfil Heritage Menu Board',
     titleUrdu: 'چائے محفل مکمل مینو کارڈ',
-    subtitle: 'Opposite Alrehman Garden Phase 2, Lahore • 0321-9597119',
+    subtitle: 'Opposite Alrehman Garden Phase 2, Lahore • 0300-1234567',
     priceTag: 'Full Card',
     category: 'menu_board',
     tagline: 'Chai Specialist • Burgers • Pizzas • Paratha Rolls • Italian Corner',
@@ -1113,7 +1113,7 @@ export const galleryData: GalleryItem[] = [
     titleUrdu: 'آفیشل گرین بورڈ مینو (بالمقابل الرحمٰن گارڈن فیز 2)',
     category: 'posters',
     image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
-    caption: 'Pizzas, Paratha Rolls, Beverages & Coffee Menu with phone 0323-9017091 / 0321-9597119.',
+    caption: 'Pizzas, Paratha Rolls, Beverages & Coffee Menu with phone 0300-1234567 / 0312-3456789.',
     isOfficialPoster: true
   },
   {
@@ -1185,7 +1185,7 @@ export const reviewsData = [
     name: 'Shahzaib Malik',
     city: 'Chai Lover',
     rating: 5,
-    comment: 'Best Doodh Patti and Grill Paratha Roll in town. Fast delivery on WhatsApp (0321-9597119). 10/10 experience!',
+    comment: 'Best Doodh Patti and Grill Paratha Roll in town. Fast delivery on WhatsApp (0300-1234567). 10/10 experience!',
     date: 'Last week'
   }
 ];

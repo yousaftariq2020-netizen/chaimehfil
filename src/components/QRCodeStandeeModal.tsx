@@ -438,7 +438,7 @@ export const QRCodeStandeeModal: React.FC<QRCodeStandeeModalProps> = ({ isOpen, 
                 }`}>
                   <div className="flex items-center justify-center gap-2 font-bold">
                     <Phone className="w-3 h-3 text-emerald-500" />
-                    <span>Free Delivery & Orders: <strong>0321-9597119</strong> / <strong>0323-9017091</strong></span>
+                    <span>Free Delivery & Orders: <strong>{cafeDetails.phone1}</strong> / <strong>{cafeDetails.phone2}</strong></span>
                   </div>
                   <div className="truncate text-[9px] opacity-80">
                     Opp. Alrehman Garden Phase II, Gate 2, Main Sharaqpur Rd, Lahore
